@@ -1,5 +1,5 @@
 // AuraSave Service Worker
-const CACHE_NAME = 'tabungan-v1';
+const CACHE_NAME = 'aurasave-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
