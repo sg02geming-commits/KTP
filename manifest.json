@@ -1,6 +1,6 @@
 {
   "name": "AuraSave - Premium Savings & Calculator",
-  "short_name": "TABUNGAN",
+  "short_name": "AuraSave",
   "description": "Kelola tabungan masa depan dengan elegan, lengkap dengan kalkulator premium.",
   "start_url": "/",
   "scope": "/",
