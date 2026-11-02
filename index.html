@@ -13,7 +13,7 @@
 <!-- iOS PWA support -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="AuraSave">
+<meta name="apple-mobile-web-app-title" content="TABUNGAN">
 <meta name="mobile-web-app-capable" content="yes">
     <title>AuraSave - Premium Savings & Calculator</title>
     <!-- Google Fonts -->
@@ -658,7 +658,23 @@
         </div>
     </div>
 
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => console.log('SW registered:', reg.scope))
+        .catch((err) => console.warn('SW registration failed:', err));
+    });
+  }
 
+  // Opsional: tombol instalasi kustom
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    // Tampilkan tombol "Instal Aplikasi" milik Anda kalau mau
+  });
+</script>
   
     <!-- FIREBASE SDK & APP LOGIC -->
     <script type="module">
